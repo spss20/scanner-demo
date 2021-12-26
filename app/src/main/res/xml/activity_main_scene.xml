@@ -46,7 +46,7 @@
                 app:customFloatValue="200" />
         </Constraint>
         <Constraint
-            android:id="@+id/tv_developer"
+            android:id="@+id/tv_result"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                 app:customFloatValue="0.0" />
         </Constraint>
         <Constraint
-            android:id="@+id/tv_developer"
+            android:id="@+id/tv_result"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -11,7 +11,6 @@ import android.util.Size
 import android.view.OrientationEventListener
 import android.view.Surface
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
@@ -93,6 +92,17 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
 
             enterPictureInPictureMode(params)
+        }
+    }
+
+
+    override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode)
+        if (!isInPictureInPictureMode) {
+            application.startActivity(
+                Intent(this, javaClass)
+                    .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+            )
         }
     }
 

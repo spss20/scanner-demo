@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Scanner Demo</string>
+    <string name="app_name">2D Scanner Demo</string>
     <string name="start_scanning">Start Scanning</string>
     <string name="turn_flash_on_off">Turn Flash On/Off</string>
     <string name="view_finder">View Finder</string>
@@ -9,5 +9,4 @@
     <string name="copy">Copy</string>
     <string name="scan_with_ml_kit">Scan with ML Kit</string>
     <string name="scan_with_zxing">Scan with ZXing</string>
-    <string name="developed_by_maulik_hirani">Developed by Maulik Hirani</string>
 </resources>

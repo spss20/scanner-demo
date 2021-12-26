@@ -28,7 +28,7 @@
         android:text="@string/copy"
         android:insetTop="0dp"
         app:cornerRadius="0dp"
-        app:backgroundTint="@color/colorCopyButton"
+        app:backgroundTint="@color/colorPrimary"
         android:insetBottom="0dp"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         app:iconGravity="textStart"
