@@ -9,8 +9,8 @@ android {
         applicationId "maulik.barcodescanner"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 6
-        versionName "1.5"
+        versionCode 7
+        versionName "7.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -67,6 +67,7 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
     // If you want to additionally use the CameraX View class
     implementation "androidx.camera:camera-view:1.0.0-alpha27"
+    implementation 'com.evrencoskun.library:tableview:0.8.9.4'
 
     /**
      * ZXing 3.4+ uses Java 8 language features, so it is required to enable core library desugaring

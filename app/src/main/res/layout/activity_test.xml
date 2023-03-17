@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/activity_main_scene">
+    tools:context=".ui.TestActivity">
 
     <com.evrencoskun.tableview.TableView
         android:id="@+id/content_container"
@@ -21,17 +21,4 @@
         app:separator_color="@color/separator_color"
         />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingScanNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/colorAccent"
-        android:src="@drawable/ic_baseline_qr_code_scanner_24"
-        android:text="Scan Again"
-        app:fabSize="normal"
-        app:tint="@color/colorWhite" />
 </RelativeLayout>

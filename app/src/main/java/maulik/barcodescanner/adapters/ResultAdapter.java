@@ -1,7 +1,6 @@
 package maulik.barcodescanner.adapters;
 
 import android.content.Context;
-import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import maulik.barcodescanner.R;
@@ -40,8 +41,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultView
         holder.barcodeResult.setText(data.getResult());
         holder.barcodeAddress.setText(data.getAddress());
         holder.gps.setText(data.getLat() + "," + data.getLon());
-        CharSequence relativeDate = DateUtils.getRelativeDateTimeString(mContext, data.getTime() , DateUtils.SECOND_IN_MILLIS , DateUtils.WEEK_IN_MILLIS , DateUtils.FORMAT_ABBREV_RELATIVE);
-        holder.barcodeTime.setText(relativeDate);
+
+        Date date = new Date(data.getTime());
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateTimeFormatted = sf.format(date);
+
+//        CharSequence relativeDate = DateUtils.getRelativeDateTimeString(mContext, data.getTime() , DateUtils.SECOND_IN_MILLIS , DateUtils.WEEK_IN_MILLIS , DateUtils.FORMAT_ABBREV_RELATIVE);
+        holder.barcodeTime.setText(dateTimeFormatted);
 
     }
 

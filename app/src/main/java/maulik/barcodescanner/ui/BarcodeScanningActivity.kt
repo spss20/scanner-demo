@@ -96,15 +96,18 @@ class BarcodeScanningActivity : AppCompatActivity() {
     }
 
 
-    override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
-        super.onPictureInPictureModeChanged(isInPictureInPictureMode)
-        if (!isInPictureInPictureMode) {
-            application.startActivity(
-                Intent(this, javaClass)
-                    .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
-            )
-        }
-    }
+//    override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean,newConfig: Configuration) {
+//        super.onPictureInPictureModeChanged(isInPictureInPictureMode , newConfig)
+//        if (!isInPictureInPictureMode) {
+//
+//            var intent = Intent(Intent(this, javaClass));
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//            application.startActivity(
+//                intent
+//            )
+//        }
+//    }
 
     private fun launchEvent(data: String) {
         val eventName = "scanner_data"

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="maulik.barcodescanner" >
+    package="maulik.barcodescanner">
 
     <uses-feature android:name="android.hardware.camera.any" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include only if your app benefits from precise location access. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -15,27 +13,33 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.TestActivity"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ui.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ui.BarcodeScanningActivity"
+            android:exported="true"
+            android:supportsPictureInPicture="true"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/FullScreenTheme" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.BarcodeScanningActivity"
-            android:exported="true"
-            android:screenOrientation="sensorPortrait"
-            android:supportsPictureInPicture="true"
-            android:theme="@style/FullScreenTheme" />
-        <activity
-            android:name=".ui.MainActivity"
-            android:screenOrientation="sensorPortrait"
-            >
-
         </activity>
     </application>
 
